@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+</head>
+<body>
+  <div class="page">
+    <!-- Title -->
+    <h1>Global Health & Wellbeing</h1>
+    <br>
+
+    <!---------------------- Section 1: Overall Health & Wellbeing ---------------------->
+    <h2>Overall Health & Wellbeing</h2>
+    <hr size="8" width="95%" color="blue"> 
+
+    <!-- Choropleth map: life expectancy -->
+     <div class="pure-g">
+       <div class="pure-u-1-1">
+         <div class="center-map">
+          <h3 style="text-align:center" id="map_title">Life Expectancy by Country: 2019</h3>
+          <p style="text-align:center">It appears that countries with low socioeconomic status' have smaller life expectancies.</p>
+          <p style="text-align:center" class="subtitle">Click the year buttons to see life expectancies for different years. Hover over countries to see exact values.</p>
+          <div id="life_map_2000"><p>2000</p></div>
+          <div id="life_map_2010"><p>2010</p></div>
+          <div id="life_map_2015"><p>2015</p></div>
+          <div id="life_map_2019"><p>2019</p></div>
+          <button id="show_map_2000">2000</button>
+          <button id="show_map_2010">2010</button>
+          <button id="show_map_2015">2015</button>
+          <button id="show_map_2019">2019</button>
+        </div>
+       </div>
+     </div>
+
+
+    <!-- Streamgraph: probability of dying from certain diseases -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="center-streamgraph">
+          <h3 style="text-align:center">Probability Trend Dying from Certain Diseases (Top 10 Countries)</h3>
+          <p style="text-align:center">Probability (%) of dying between age 30 and exact age 70 from any of cardiovascular disease, cancer, diabetes, or chronic respiratory disease.</p>
+          <p style="text-align:center" class="subtitle">Click a country in the legend to highlight it.</p>
+          <div id="streamgraph_cancer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar chart: suicide rate -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="center-pyramid">
+          <h3 style="text-align:center">Proportion of Males & Females Committing Suicide</h3>
+          <p style="text-align:center">Males appear to consistantly have a significantly higher suicide rate than females throughout the years.</p>
+          <div id="bar_suicide"></div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------------- Section 2: Access to Health Resources ---------------------->
+    <br>
+    <br>
+    <h2>Access to Health Resources</h2>
+    <hr size="8" width="95%" color="blue"> 
+
+    <!-- Heatmap: number of doctors -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h3>Number of Doctors per 10'000 People (Top 10 Countries)</h3>
+          <p>Generally, it appears that the number of doctors increases year after year.</p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="heatmap_doctors" class="vis-container"></div>
+      </div>
+    </div>
+
+ 
+    <!-- Scatter plot: life expectancy vs sanitisation -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="scatter_plot_le_sanitization"  class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h3>Life Expectancy as Compared to Sanitisation Rates</h3>
+          <p>It appears that countries with higher sanitisation have higher life expectancies.</p>
+          <p class="subtitle">Click a continent in the legend to highlight it.</p>
+        </div>
+      </div> 
+    </div>
+
+    <!-- Line graph: reliance on clean fuel and tech -->
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h3>Reliance on Clean Fuels and Technologies</h3>
+          <p>Percentage of population with primary reliance on clean fuels and technologies. Appears to have a steady increase.</p>
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div id="line_graph_clean" class="vis-container"></div>
+      </div>
+    </div>
+
+    <!---------------------- Section 3: Substance Usage ---------------------->
+    <br>
+    <br>
+    <h2>Substance Usage</h2>
+    <hr size="8" width="95%" color="blue"> 
+
+     
+    <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h3>Alcohol and Tobacco (Smoking) Usage</h3>
+          <p>It appears that drinking and smoking has decreased throughout the years.</p>
+        </div>
+      </div>
+      <!-- Slope graph: alcohol usage -->
+      <div class="pure-u-1-3">
+        <div id="slope_graph_alcohol"  class="vis-container"></div>
+      </div>
+      <!-- Stacked area chart: tobacco (smoking) usage -->
+      <div class="pure-u-1-3">
+        <div id="stacked_area_smoking"  class="vis-container"></div>
+      </div>
+    </div>
+   
+  </div> 
+
+  <script type="text/javascript">
+    vegaEmbed('#life_map_2000', "js/life_map_2000.vg.json").then(function(result) {
+    }).catch(console.error);
+    vegaEmbed('#life_map_2010', "js/life_map_2010.vg.json").then(function(result) {
+    }).catch(console.error);
+    vegaEmbed('#life_map_2015', "js/life_map_2015.vg.json").then(function(result) {
+    }).catch(console.error);
+    vegaEmbed('#life_map_2019', "js/life_map_2019.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#scatter_plot_le_sanitization', "js/scatter_plot_le_sanitization.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#bar_suicide', "js/bar_suicide.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#heatmap_doctors', "js/heatmap_doctors.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#streamgraph_cancer', "js/streamgraph_cancer.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#line_graph_clean', "js/line_graph_clean.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#stacked_area_smoking', "js/stacked_area_smoking.vg.json").then(function(result) {
+    }).catch(console.error);
+
+    vegaEmbed('#slope_graph_alcohol', "js/slope_graph_alcohol.vg.json").then(function(result) {
+    }).catch(console.error);
+
+
+    const mapTitle = document.getElementById("map_title")
+
+    const lifeMap2000 = document.getElementById("life_map_2000")
+    const lifeMap2010 = document.getElementById("life_map_2010")
+    const lifeMap2015 = document.getElementById("life_map_2015")
+    const lifeMap2019 = document.getElementById("life_map_2019")
+
+
+    const showMap2000 = document.getElementById("show_map_2000")
+    const showMap2010 = document.getElementById("show_map_2010")
+    const showMap2015 = document.getElementById("show_map_2015")
+    const showMap2019 = document.getElementById("show_map_2019")
+
+    lifeMap2019.style.display = "block"
+
+    lifeMap2000.style.display = "none"
+    lifeMap2010.style.display = "none"
+    lifeMap2015.style.display = "none"
+
+    showMap2000.onclick = function() {
+      mapTitle.textContent = "Life Expectancy by Country: 2000"
+      lifeMap2000.style.display = "block"
+
+      lifeMap2010.style.display = "none"
+      lifeMap2015.style.display = "none"
+      lifeMap2019.style.display = "none"
+    }
+
+    showMap2010.onclick = function() {
+      mapTitle.textContent = "Life Expectancy by Country: 2010"
+      lifeMap2010.style.display = "block"
+
+      lifeMap2000.style.display = "none"
+      lifeMap2015.style.display = "none"
+      lifeMap2019.style.display = "none"
+    }
+
+    showMap2015.onclick = function() {
+      mapTitle.textContent = "Life Expectancy by Country: 2015"
+      lifeMap2015.style.display = "block"
+
+      lifeMap2000.style.display = "none"
+      lifeMap2010.style.display = "none"
+      lifeMap2019.style.display = "none"
+    }
+
+    showMap2019.onclick = function() {
+      mapTitle.textContent = "Life Expectancy by Country: 2019"
+      lifeMap2019.style.display = "block"
+
+      lifeMap2000.style.display = "none"
+      lifeMap2010.style.display = "none"
+      lifeMap2015.style.display = "none"
+    }
+  </script>
+
+
+</body>
+</html>
+

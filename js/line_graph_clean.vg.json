@@ -1,0 +1,13 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "width": 900, 
+    "height": 400,
+    "description": "Google's stock price over time.",
+    "data": {"url": "data/cleanFuelAndTech.csv"},
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Year", "type": "nominal"},
+      "y": {"field": "Population_Clean", "type": "quantitative", "title": "Population percentage using clean fuel/tech"}
+    }
+  }
+  

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900, 
+  "height": 400,
+  "data": {"url": "data/30-70cancerChdEtc.csv"},
+  "mark": "area",
+  "params": [{
+    "name": "Country",
+    "select": {"type": "point", "fields": ["Country"]},
+    "bind": "legend"
+  }],
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "Year", "title": "Year",
+      "axis": {"domain": false, "format": "%Y", "tickSize": 0}
+    },
+    "y": {
+      "aggregate": "sum", 
+      "field": "Probability_Of_Death",
+      "axis": null,
+      "stack": "center"
+    },
+    "color": {"field":"Country", "scale":{"scheme": "category20b"}},
+    "opacity": {
+      "condition": {"param": "Country", "value": 1},
+      "value": 0.2
+    }
+  }
+}

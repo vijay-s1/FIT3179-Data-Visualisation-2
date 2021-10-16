@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400, 
+  "height": 300,
+  "data": {"url": "data/tobaccoAge15.csv"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "Year", "title": "Year",
+      "axis": {"format": "%Y"}
+    },
+    "y": {
+      "aggregate": "sum", "field": "Population_Smoking", "title": "Population Percentage Smoking"
+    },
+    "color": {
+      "field": "Gender",
+      "scale": {"scheme": "tableau20"}
+    }
+  }
+}

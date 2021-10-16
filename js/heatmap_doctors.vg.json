@@ -1,0 +1,16 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "data/medicalDoctors.csv"},
+    "width": 800,
+    "height": 400,
+    "mark": "rect",
+    "encoding": {
+      "y": {"field": "Country", "type": "nominal"},
+      "x": {"field": "Year", "type": "ordinal"},
+      "color": {"aggregate": "mean", "field": "Doctors_Per_10000", "title": "Doctors Per 10'000 People"}
+    },
+    "config": {
+      "axis": {"grid": true, "tickBand": "extent"}
+    }
+  }
+  

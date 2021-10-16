@@ -1,0 +1,185 @@
+﻿Continent,Country,Average_LE,Average_Percent_Sanitised
+Asia,Afghanistan,51,33
+Europe,Albania,68,94
+Africa,Algeria,65,86
+Africa,Angola,50,39
+North America,Antigua and Barbuda,67,86
+South America,Argentina,66,91
+Europe,Armenia,65,90
+Oceania,Australia,70,100
+Europe,Austria,70,100
+Asia,Azerbaijan,62,79
+North America,Bahamas,64,92
+Asia,Bahrain,65,100
+Asia,Bangladesh,62,37
+North America,Barbados,67,93
+Europe,Belarus,64,95
+Europe,Belgium,69,99
+North America,Belize,64,85
+Europe,Benin,53,13
+Asia,Bhutan,61,60
+South America,Bolivia,61,46
+Europe,Bosnia and Herzegovina,67,95
+Africa,Botswana,49,64
+South America,Brazil,64,81
+Asia,Brunei Darussalam,65,96
+Europe,Bulgaria,65,86
+Africa,Burkina Faso,51,16
+Africa,Burundi,50,46
+Africa,Cabo Verde,64,58
+Asia,Cambodia,58,34
+Africa,Cameroon,50,39
+North America,Canada,71,100
+Africa,Central African Rep.,43,21
+Africa,Chad,49,10
+South America,Chile,69,96
+Asia,China,67,71
+South America,Colombia,67,81
+Africa,Comoros,57,33
+Africa,Congo,52,16
+North America,Costa Rica,69,95
+Africa,Côte d’Ivoire,50,26
+Europe,Croatia,67,96
+North America,Cuba,68,90
+Europe,Cyprus,71,100
+Europe,Czechia,68,99
+Asia,Democratic People's Republic of Korea,63,78
+Africa,Dem. Rep. Congo,50,21
+Europe,Denmark,70,100
+Africa,Djibouti,56,54
+North America,Dominican Republic,64,81
+South America,Ecuador,67,79
+Africa,Egypt,62,93
+North America,El Salvador,64,85
+Africa,Equatorial Guinea,51,62
+Africa,Eritrea,52,11
+Europe,Estonia,67,99
+Africa,Eswatini,45,55
+Africa,Ethiopia,54,5
+Oceania,Fiji,59,87
+Europe,Finland,70,99
+Europe,France,71,99
+Africa,Gabon,55,42
+Africa,Gambia,55,47
+North America,Georgia,64,92
+Europe,Germany,70,99
+Africa,Ghana,55,13
+Europe,Greece,70,98
+North America,Grenada,64,91
+North America,Guatemala,60,64
+Africa,Guinea,51,16
+Africa,Guinea-Bissau,49,16
+South America,Guyana,56,83
+North America,Haiti,47,26
+North America,Honduras,62,72
+Europe,Hungary,66,98
+Europe,Iceland,71,99
+Asia,India,57,38
+Asia,Indonesia,61,57
+Asia,Iran,65,88
+Asia,Iraq,61,81
+Asia,Ireland,70,90
+Asia,Israel,71,100
+Europe,Italy,71,99
+Africa,Jamaica,66,85
+Asia,Japan,73,100
+Asia,Jordan,66,98
+Asia,Kazakhstan,61,97
+Africa,Kenya,54,31
+Oceania,Kiribati,51,36
+Asia,Kuwait,69,100
+Asia,Kyrgyzstan,62,95
+Asia,Lao People's Democratic Republic,57,52
+Europe,Latvia,64,90
+Asia,Lebanon,65,85
+Africa,Lesotho,42,27
+Africa,Liberia,51,16
+Africa,Libya,65,99
+Europe,Lithuania,65,89
+Europe,Luxembourg,70,98
+Africa,Madagascar,55,7
+Africa,Malawi,50,24
+Asia,Malaysia,65,98
+Asia,Maldives,67,88
+Africa,Mali,51,27
+Europe,Malta,70,100
+Africa,Mauritania,58,31
+Africa,Mauritius,63,93
+North America,Mexico,65,83
+Oceania,Micronesia (Federated States of),56,60
+Asia,Mongolia,58,54
+Europe,Montenegro,66,95
+Africa,Morocco,63,78
+Africa,Mozambique,47,19
+Asia,Myanmar,58,68
+Africa,Namibia,53,31
+Asia,Nepal,59,37
+Europe,Netherlands,71,98
+Oceania,New Zealand,69,100
+North America,Nicaragua,65,67
+Africa,Niger,51,10
+Africa,Nigeria,51,34
+Europe,Norway,70,98
+Asia,Oman,63,95
+Asia,Pakistan,55,46
+North America,Panama,68,72
+Oceania,Papua New Guinea,56,18
+South America,Paraguay,65,80
+South America,Peru,68,70
+Asia,Philippines,62,68
+Europe,Poland,67,93
+Europe,Portugal,69,99
+Asia,Qatar,65,100
+Asia,Republic of Korea,71,100
+Europe,Republic of Moldova,62,75
+Europe,Romania,65,79
+Europe,Russia,61,87
+Africa,Rwanda,54,56
+North America,Saint Lucia,65,85
+North America,Saint Vincent and the Grenadines,63,80
+Asia,Samoa,62,98
+Africa,Sao Tome and Principe,59,32
+Asia,Saudi Arabia,63,99
+Africa,Senegal,56,45
+Europe,Serbia,66,96
+Africa,Seychelles,64,98
+Africa,Sierra Leone,48,13
+Asia,Singapore,72,100
+Europe,Slovakia,67,98
+Europe,Slovenia,69,99
+Oceania,Solomon Islands,57,26
+Africa,Somalia,47,28
+Africa,South Africa,52,67
+Africa,S. Sudan,51,9
+Europe,Spain,71,100
+Asia,Sri Lanka,65,90
+Africa,Sudan,59,34
+Africa,Sudan (until 2011),56,23
+South America,Suriname,62,82
+Europe,Sweden,71,99
+Europe,Switzerland,71,100
+Asia,Syrian Arab Republic,62,92
+Asia,Tajikistan,61,93
+Asia,Thailand,67,95
+Europe,The former Yugoslav Republic of Macedonia,65,91
+Asia,Timor-Leste,58,45
+Africa,Togo,53,13
+Oceania,Tonga,64,91
+North America,Trinidad and Tobago,64,92
+Africa,Tunisia,66,85
+Europe,Turkey,67,90
+Asia,Turkmenistan,60,95
+Africa,Uganda,52,18
+Europe,Ukraine,63,95
+Asia,United Arab Emirates,65,99
+Europe,United Kingdom,69,99
+Africa,Tanzania,54,17
+North America,United States of America,66,100
+South America,Uruguay,67,95
+Asia,Uzbekistan,62,97
+Oceania,Vanuatu,57,51
+South America,Venezuela (Bolivarian Republic of),65,94
+Asia,Viet Nam,65,68
+Asia,Yemen,57,51
+Africa,Zambia,49,25
+Africa,Zimbabwe,48,42

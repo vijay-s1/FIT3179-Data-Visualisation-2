@@ -1,0 +1,32 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": { "url": "data/crudeSuicideRates.csv"},
+    "width": 200,
+    "height": 400,
+    "mark": "bar",
+    "encoding": {
+      "column": {
+        "field": "Year", "type": "ordinal", "spacing": 10,
+        "header": {"orient": "bottom"}
+      },
+      "y": {
+        "aggregate": "sum", "field": "Suicide_Rate",
+        "title": "% committing suicide",
+        "axis": {"grid": false}
+      },
+      "x": {
+        "field": "Sex",
+        "axis": null
+      },
+      "color": {
+        "field": "Sex",
+        "scale": {"range": ["#7290e0", "#72e0df"]}
+      }
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {"domainWidth": 1}
+    }
+  }
+  

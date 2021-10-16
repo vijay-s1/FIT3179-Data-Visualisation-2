@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 350,
+    "data": {
+        "url": "data/lifeExpectancySanitisation.csv"
+    }, 
+    
+    "mark": "circle",
+    "params":[{
+        "name": "continent_selection",
+        "select": {"type": "point", "fields": ["Continent"]},
+        "bind": "legend"
+    }],
+    "encoding": {
+        "x": {
+            "field": "Average_Percent_Sanitised",
+            "type": "quantitative",
+            "title": "Percentage Sanitised"
+        },
+        "y": {
+            "field": "Average_LE",
+            "type": "quantitative",
+            "title": "Average Life Expectancy"
+        },
+        "color": {
+            "field": "Continent",
+            "type": "nominal",
+            "scale": {
+                "domain": [
+                    "North America",
+                    "South America",
+                    "Europe",
+                    "Africa",
+                    "Asia",
+                    "Oceania"
+                ],
+                "range": [
+                    "#e41a1c",
+                    "#984ea3",
+                    "#ff7f00",
+                    "#a6cee3",
+                    "#377eb8",
+                    "#a65628"
+                ]
+            }
+        },
+        "opacity": {
+            "condition": {"param": "continent_selection", "value": 1},
+            "value": 0.2
+        },
+        "tooltip": [
+                {"field": "Country", "type": "nominal"},
+                {"field": "Average_Percent_Sanitised", "title": "Population Percentage Sanitised", "type": "quantitative", "format": ","},
+                {"field": "Average_LE", "title":"Average Life Expectancy", "type": "quantitative", "format": ","}
+            ]
+    }
+    
+
+    
+}  
